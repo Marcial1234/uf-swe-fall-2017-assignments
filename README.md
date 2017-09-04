@@ -7,13 +7,13 @@ Switch branches, or click on the links below to view the assignments.
 Introduction to HTTP and Asynchronous Programming using Node.js
 
 ## [Assignment 2](../../tree/Assignment2)
-Introduction to [name]
+Introduction to Front-end development with Angular.js
 
 ## [Assignment 3](../../tree/Assignment3)
-Introduction to [name]
+Persisting data using MongoDB and Mongoose
 
 ## [Assignment 4](../../tree/Assignment4)
-Introduction to [name]
+Creating a server-side CRUD module using Express
 
 ## [Assignment 5](../../tree/Assignment5)
-Introduction to [name]
+Using our server API and implementing state on the front-end
