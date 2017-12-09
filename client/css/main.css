@@ -1,0 +1,30 @@
+#searchBar {
+  margin: 15px 10px;
+}
+
+nav {
+  margin-top: 20px;
+  margin-left: 60px;
+}
+
+.tableWrapper {
+  max-height: 500px;
+  overflow: auto;
+}
+
+#loader {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formWrapper {
+  border-radius: 5px;
+  background-color: #e5f2ff;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.angular-google-map-container {
+  height: 500px;
+}

@@ -1,0 +1,47 @@
+<!-- 
+  This template will load in the <ui-view> when we start the application. 
+  Notice the ng-init attribute, which will load the listings from our server on initializing the view. 
+  -->
+<div class="row" ng-controller="ListingsController" ng-init="find()">
+  <div class="col-md-offset-1 col-md-10">
+    <!-- 
+      If an error occurs while we try to save the listing using our server's API, it will show up here. 
+      This is made possible by handling any errors by binding them to $scope.error. 
+
+        <strong ng-bind="error"></strong> is similar to <strong>{{ error }}</strong>
+
+      From the Angular docs: 
+      "It is preferable to use ngBind instead of {{ expression }} if a template is momentarily displayed by the browser in its raw state before Angular compiles it. Since ngBind is an element attribute, it makes the bindings invisible to the user while the page is loading." (https://docs.angularjs.org/api/ng/directive/ngBind)
+     -->
+    <div ng-show="error" class="text-danger">
+      <strong ng-bind="error"></strong>
+    </div>
+    <div ng-show="success" class="text-success">
+      <strong ng-bind="success"></strong>
+    </div>
+    <div class="input-group" id="searchBar">
+      <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-search"></span></span>
+      <input type="text" class="form-control" placeholder="Search" ng-model="query">
+    </div>
+    <div class="tableWrapper">
+      <table class="table table-striped table-hover">
+        <tr>
+          <th>Code</th>
+          <th>Building Name</th>
+          <th></th>
+        </tr>
+        <!-- 
+          The ui-sref attribute is used by Angular UI Router to switch the state to an individual listing, 
+          as specified in 'config/listings.client.routes.js'. The listing id is passed in as a parameter. 
+          When a user clicks on a table row, the view will display a single listing and the state change will be
+          reflected in the browser's URL. 
+          -->
+        <tr ng-repeat="listing in listings | filter: query" ui-sref="listings.view({ listingId: listing._id })">
+          <td>{{listing.code}}</td>
+          <td>{{listing.name}}</td>
+        </tr>
+      </table>
+    </div>
+    <img id="loader" ng-show="loading" src="/../../img/484.gif">
+  </div>
+</div>

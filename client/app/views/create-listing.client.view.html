@@ -1,0 +1,46 @@
+<div class="row" ng-controller="ListingsController">
+  <div class="col-md-offset-1 col-md-10 formWrapper">
+    <div class="page-header">
+      <h3>Create New Listing</h3>
+      <!-- 
+        Validation of forms is important to ensure that a user submits the correct information. Angular provides
+        some useful APIs for validating forms. Documentation can be found here: 
+
+          https://docs.angularjs.org/guide/forms
+
+        We use the ng-submit directive to create a new listing. The controller's create() function checks the validity of the form and sends any errors in the form of a call to $broadcast. Bootstrap also provides 
+        conveience methods for displaying these error messages to the user. If you're not quite sure what this code is doing, take a look at this link: 
+
+          https://github.com/paulyoder/angular-bootstrap-show-errors
+       -->
+      <form name="listingForm" class="form-horizontal" ng-submit="create(listingForm.$valid)">
+        <fieldset>
+          <div class="form-group" show-errors>
+            <label for="name">Name</label>
+            <input name="name" type="text" ng-model="name" id="name" class="form-control" placeholder="Name" required>
+            <div ng-messages="listingForm.name.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Listing name is required</p>
+            </div>
+          </div>
+          <div class="form-group" show-errors>
+            <label for="code">Code</label>
+            <input name="code" type="text" ng-model="code" id="code" class="form-control" placeholder="Code" required>
+            <div ng-messages="listingForm.code.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Listing code is required</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input name="address" type="text" ng-model="address" id="address" class="form-control" placeholder="Address">
+          </div>
+          <div class="form-group">
+            <input type="submit" class="btn btn-default">
+          </div>
+          <div ng-show="error" class="text-danger">
+            <strong ng-bind="error"></strong>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>

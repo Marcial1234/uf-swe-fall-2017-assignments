@@ -1,0 +1,26 @@
+{
+  "name": "Assignment5",
+  "version": "1.0.0",
+  "homepage": "https://github.com/medhir/assignment4",
+  "authors": [
+    "Medhir Bhargava <medhirbhargava@gmail.com>"
+  ],
+  "description": "Implementing state using Angular UI Router",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.15",
+    "jquery": "~2.1.4",
+    "angular": "~1.4.8",
+    "bootstrap": "~3.3.6",
+    "angular-google-maps": "~2.2.1",
+    "angular-bootstrap": "~0.14.3"
+  }
+}
