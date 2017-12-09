@@ -17,3 +17,6 @@ Creating a server-side CRUD module using Express
 
 ## [Assignment 5](../../tree/Assignment5)
 Using our server API and implementing state on the front-end
+
+## [Assignment 6](../../tree/Assignment6)
+Deploy Website
