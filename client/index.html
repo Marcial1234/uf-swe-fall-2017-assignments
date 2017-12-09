@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/">
+    <link rel="stylesheet" href="/public/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body ng-app="directoryApp">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>UF Directory App</h1>
+        </div>
+        <div class="col-md-6">
+          <!-- Add a ui-sref property to the anchor tags to allow navigation between different states -->
+          <nav>
+            <ul class="nav nav-pills">
+              <li><a>List View</a></li>
+              <li><a>Map View</a></li>
+              <li><a>Create New Listing</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div ui-view></div>
+    </div>
+    <!-- Dependencies -->
+    <script src="/public/lib/jquery/dist/jquery.min.js"></script
+    <script src="/public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/public/lib/angular/angular.js"></script>
+    <script src="/public/lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/public/lib/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="/public/lib/lodash/dist/lodash.min.js"></script>
+    <script src="/public/lib/angular-simple-logger/dist/angular-simple-logger.min.js"></script>
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script src="/public/lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
+
+    <!-- Application Source Code -->
+    <script src="app/app.js"></script>
+    <script src="app/config/listings.client.routes.js"></script>
+    <script src="app/factories/listings.client.factory.js"></script>
+    <script src="app/controllers/listings.client.controller.js"></script>
+  </body>
+</html>

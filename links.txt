@@ -1,0 +1,15 @@
+links.txt
+------------------------------------------
+
+Modularizing Angular applications:
+http://henriquat.re/modularizing-angularjs/modularizing-angular-applications/modularizing-angular-applications.html
+
+Basics of state-based routing with Angular UI Router:
+http://joelhooks.com/blog/2013/07/22/the-basics-of-using-ui-router-with-angularjs/
+
+For assignment 5: 
+ngResource - http://jacopretorius.net/2013/04/using-ngresource-with-angularjs.html
+
+
+Services vs factories 
+http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/

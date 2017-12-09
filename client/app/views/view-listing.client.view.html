@@ -1,0 +1,23 @@
+<div class="row" ng-controller="ListingsController" ng-init="findOne()">
+  <div class="col-md-offset-1 col-md-10">
+    <div ng-show="error" class="text-danger">
+      <strong ng-bind="error"></strong>
+    </div>
+    <div class="jumbotron">
+      <img id="loader" ng-show="loading" src="/../../img/484.gif">
+      <div ng-show="listing">
+        <h2>{{listing.name}}</h2>
+        <p>Building Code: {{listing.code}}</p>
+        <p>Address: {{listing.address}}</p>
+        <a class="btn btn-primary" ui-sref="listings.edit({ listingId: listing._id })">
+          <i class="glyphicon glyphicon-edit"></i>
+          Edit
+        </a>
+        <a class="btn btn-danger" ng-click="remove();">
+          <i class="glyphicon glyphicon-trash"></i>
+          Remove
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
